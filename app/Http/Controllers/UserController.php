@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function formCriarUsuario(){
+        return view("cadastro_usuario");
+
+    }
     public function criar(Request $request) {
         $user = new User;
         $user->name = $request->name;
@@ -14,7 +18,7 @@ class UserController extends Controller
         $user->email = $request->email;
 
         $user->save();
-        return redirect('/users');
+        return redirect('/listar_usuarios');
     }
 
     public function listar() {
