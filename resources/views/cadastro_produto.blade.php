@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastrar Produto</title>
 </head>
 <body>
-    <form action="/criar_produto">
+    <form action="/criar_produto" method= "post">
+        @csrf
         <label for="name">Nome</label>
         <input type="text" name="name">
 
@@ -14,9 +16,9 @@
         <input type="text" name="descricao">
 
         <label for="preco">Preço</label>
-        <input type="number" name="preco">
+        <input type="float" name="preco">
 
-        <input type="subimit" value="Salvar">
+        <input type="submit" value="Salvar">
 
     </form>
     

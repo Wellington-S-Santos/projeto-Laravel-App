@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,8 @@ Route::post('/criar_usuario', [UserController::class, 'criar']);
 
 
 
-Route::get('/cadastrar_produto', [UserController::class,'formCriarProduto']);
-Route::get('/listar_produto', [UserController::class,'listarProduto']);
-Route::post('/criar_produto', [UserController::class,'criarProduto']);
+Route::get('/cadastrar_produto', [ProductController::class,'formCriarProduto']);
+
+Route::get('/listar_produto', [ProductController::class,'listarProduto']);
+
+Route::post('/criar_produto', [ProductController::class,'criarProduto']);
