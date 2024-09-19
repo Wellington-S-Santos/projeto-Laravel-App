@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/stely.css">
-    <title>Cadastrar Produto</title>
+    <title>Criar Vendedor</title>
 </head>
 <body>
-    <form class="cadastro" action="/criar_produto" method= "post">
+    <form  class="cadastro" action="/criar_vendedor" method="post">
         @csrf
         <label for="name">Nome</label>
         <input type="text" name="name">
 
-        <label for="descricao">Descrição</label>
-        <input type="text" name="descricao">
+        <label for="matricula">Matricula</label>
+        <input type="text" name="matricula">
 
-        <label for="preco">Preço</label>
-        <input type="float" name="preco">
+        <label for="comissao">Comissão</label>
+        <input type="float" name="comissao">
 
         <input class="button"  type="submit" value="Salvar">
-
     </form>
-    
 </body>
 </html>

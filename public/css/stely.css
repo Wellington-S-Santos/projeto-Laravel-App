@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:beige;
+    justify-content: center;
+    align-items:center;
+    
+}
+.cadastro{
+    
+    width: 200px;
+    height: 180px;
+    margin: solid 1px black;
+    background-color: azure;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: solid 1px black;
+}
+.button{
+    width: 80px;
+    background-color: green;
+    font-weight: bold;
+    border: thick;
+    font-size: 18px;
+    margin-top: 5px;
+    justify-content: center;
+
+}
+#titulo{
+    width: 233px;
+}
+
+
+
+
+th, td {
+    border: 1px solid #000; 
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; 
+}
