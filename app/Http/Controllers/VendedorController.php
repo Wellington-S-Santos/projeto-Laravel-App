@@ -23,4 +23,10 @@ class VendedorController extends Controller
         $vendedores = Vendedor::all();
         return view("vendedores", ["vendedores"=> $vendedores]);
     }
+    public function deletar($id){
+        $vendedor = new Vendedor;
+        $vendedor->find($id)->delete();
+        return redirect("/listar_vendedor");
+
+    }
 }

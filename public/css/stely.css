@@ -3,7 +3,10 @@ body{
     flex-direction: column;
     background-color:beige;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
     
 }
 .cadastro{
