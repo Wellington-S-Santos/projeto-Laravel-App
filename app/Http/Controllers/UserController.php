@@ -23,7 +23,7 @@ class UserController extends Controller
 
     public function listar() {
         $users = User::all();
-
+    
         return view("users", ["users"=>$users]);
     }
     public function deletar ($id){
@@ -41,7 +41,7 @@ class UserController extends Controller
     public function editar(Request $request){
        User::where('id',$request->id)->update([
         'name'=> $request->name,
-       'cpf '=> $request->cpf,
+       'cpf'=> $request->cpf,
        'email' => $request->email]);
         return redirect('/listar_usuarios');
     }

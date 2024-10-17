@@ -7,6 +7,7 @@
   <title>Vendedores</title>
 </head>
 <body>
+  
 <table>
     <thead>
       <h1>Vendedores</h1>
@@ -30,6 +31,7 @@
             {{method_field("DELETE")}}
             <input type="submit" value="delete" class="button">
           </form>
+          <a href="/editar_vendedor/{{$vendedor->id}}" class="aButton">Editar</a>
         </td>
       </tr>
       @endforeach

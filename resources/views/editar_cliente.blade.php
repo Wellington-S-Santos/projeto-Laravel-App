@@ -7,17 +7,17 @@
     <title>Editar Usuario</title>
 </head>
 <body>
-<form class="cadastro" action="/editar_usuario/{{$user->id}}" method="post">
+<form class="cadastro" action="/editar_cliente/{{$cliente->id}}" method="post">
         @csrf
         {{method_field("PATCH")}}
         <label for="name">Nome</label>
-        <input type="text" name="name" value="{{$user->name}}">
+        <input type="text" name="name" value="{{$cliente->name}}">
 
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf" value="{{$user->cpf}}">
+        <input type="text" name="cpf" value="{{$cliente->cpf}}">
 
         <label for="email">Email</label>
-        <input type="text" name="email" value="{{$user->email}}">
+        <input type="text" name="email" value="{{$cliente->email}}">
 
         <input class="button"  type="submit" value="Salvar">
     </form>

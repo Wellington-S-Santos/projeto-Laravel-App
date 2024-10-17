@@ -31,4 +31,17 @@ class ClienteController extends Controller
         $cliente->find($id)->delete();
         return redirect("/listar_cliente");
     }
+    public function formEditarCliente($id){
+        $cliente = Cliente::find($id);
+       
+        return view("editar_cliente",["cliente"=>$cliente]);
+    }
+    public function editar(Request $request){
+       Cliente::where('id',$request->id)->update([
+        'name'=> $request->name,
+       'cpf'=> $request->cpf,
+       'email' => $request->email]);
+       return redirect("/listar_cliente");
+    }
+
 }

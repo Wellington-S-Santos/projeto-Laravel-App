@@ -30,6 +30,8 @@
             {{method_field("DELETE")}}
             <input type="submit" value="delete" class="button">
           </form>
+
+          <a href="/editar_cliente/{{$cliente->id}}" class="aButton">Editar</a>
         </td>
         
       </tr>

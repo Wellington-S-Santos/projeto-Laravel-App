@@ -1,48 +1,62 @@
-body{
+body {
     display: flex;
     flex-direction: column;
-    background-color:beige;
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-
-    
+    font-family: 'Arial', sans-serif; /* Fonte mais profissional */
 }
-.cadastro{
-    
-    width: 200px;
+
+.cadastro {
+    width: 200px; /* Largura aumentada para mais espaço */
     height: 180px;
-    margin: solid 1px black;
-    background-color: azure;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    border: solid 1px black;
+    padding: 20px; /* Mais padding para um visual mais arejado */
+    margin: 20px;
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border: 1px solid #ccc; /* Borda mais suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-weight: normal; /* Peso de fonte normal para melhor legibilidade */
+    font-size: 18px; /* Tamanho de fonte mais adequado */
 }
-.button{
-    width: 80px;
-    background-color: green;
+
+.button {
+   
+    margin-top:4px;
+    width: 100%; /* Botão ocupa toda a largura do contêiner */
+    height: 40px;
+    padding: 10px; /* Mais espaço interno */
+    background-color: #28a745; /* Cor verde mais suave */
+    color: white;
+    text-align: center;
     font-weight: bold;
-    border: thick;
+    border: none; /* Removendo borda padrão */
+    border-radius: 5px; /* Bordas arredondadas no botão */
     font-size: 18px;
-    margin-top: 5px;
-    justify-content: center;
-
-}
-#titulo{
-    width: 233px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
 }
 
+.button:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
 
-
+#titulo {
+    margin-bottom: 20px; /* Espaço inferior */
+    font-size: 24px; /* Título maior */
+    color: #333; /* Cor do texto mais escura */
+}
 
 th, td {
-    border: 1px solid #000; 
-    padding: 8px;
+    border: 1px solid #ccc; /* Borda mais suave */
+    padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2; /* Manter cor de fundo suave */
+    font-weight: bold; /* Negrito para cabeçalhos */
 }

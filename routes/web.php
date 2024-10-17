@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendedorController;
+
 use Illuminate\Support\Facades\Route;
+
 
 //Rotas Usuario
 Route::get('/cadastro_usuario', [UserController::class,'formCriarUsuario']);
@@ -30,6 +33,10 @@ Route::post('/criar_produto', [ProductController::class,'criarProduto']);
 
 Route::delete('/delete_produto/{id}', [ProductController::class,'deletar']);
 
+Route::get('/editar_produto/{id}', [ProductController::class,'formEditarProduto']);
+
+Route::patch('/editar_produto/{id}', [ProductController::class,'editar']);
+
 
 //Rotas Vendedor
 Route::get('/cadastrar_vendedor', [VendedorController::class,'formCriarVendedor']);
@@ -40,6 +47,9 @@ Route::post('/criar_vendedor', [VendedorController::class,'criarVendedor']);
 
 Route::delete('/delete_vendedor/{id}', [VendedorController::class,'deletar']);
 
+Route::get('/editar_vendedor/{id}', [VendedorController::class,'formEditarVendedor']);
+
+Route::patch('/editar_vendedor/{id}', [VendedorController::class,'editar']);
 
 
 //Rotas Cliente
@@ -50,3 +60,11 @@ Route::get('/listar_cliente', [ClienteController::class,'listarCliente']);
 Route::post('/criar_cliente', [ClienteController::class,'criarCliente']);
 
 Route::delete('/delete_cliente/{id}', [ClienteController::class,'deletar']);
+
+Route::get('/editar_cliente/{id}', [ClienteController::class,'formEditarCliente']);
+
+Route::patch('/editar_cliente/{id}', [ClienteController::class,'editar']);
+
+
+//App
+Route::get('/', [AppController::class,'inicio']);

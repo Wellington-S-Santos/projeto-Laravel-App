@@ -8,6 +8,12 @@
   <title>Usuários</title>
 </head>
 <body>
+@if ($users->isEmpty())
+        <h1>Lista vazia</h1>
+        <a href="/cadastro_usuario" class="aButtoni">Cadastrar Usuário</a>
+
+
+      @else
 <table>
     <thead>
       <h1>Usuários</h1>
@@ -19,6 +25,7 @@
       </tr>
     </thead>
     <tbody>
+    
       @foreach ($users as $user)
       <tr>
         <td>{{$user->name}}</td>
@@ -32,10 +39,12 @@
             <input type="submit" value="delete" class="button">
           </form>
 
-          <a href="/editar_usuario/{{$user->id}}">Editar</a>
+          <a href="/editar_usuario/{{$user->id}}" class="aButton">Editar</a>
         </td>
       </tr>
       @endforeach
+      @endif
+
     </tbody>
   </table>
 </body>
